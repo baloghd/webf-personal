@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Domonkos Balogh - Main Page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Domonkos Balogh</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Main Page</h1>
+        <p>Welcome!</p>
+        <p>
+            This is the personal page of me, Domonkos Balogh. I am currently working as a Data Scientist and studying
+            Computer Science at Eötvös Loránd University. I am based in Budapest. I like to play chess and take hikes
+            with my girlfriend.
+            Here's a <a href="cv.html">link to my CV</a>!</p>
+
+        <h2>Get in touch with me</h2>
+        <form class="form-horizontal" action="">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Name:</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="col-sm-6">
+                    Message subject:
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Personal</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Business</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email" placeholder="Enter password" name="pwd">
+                </div>
+                <div class="col-sm-6">
+                    <input type="checkbox" id="unanswered"> I understand that my message may remain unanswered.
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://paypal.github.io/skipto/downloads/js/SkipTo.min.js"></script>
+
     <title>Domonkos Balogh - Main Page</title>
 </head>
 
@@ -25,20 +30,31 @@
     </nav>
 
     <div class="container">
-        <h1>Main Page</h1>
-        <p>Welcome!</p>
-        <p>
-            This is the personal page of me, Domonkos Balogh. I am currently working as a Data Scientist and studying
-            Computer Science at Eötvös Loránd University. I am based in Budapest. I like to play chess and take hikes
-            with my girlfriend.
-            Here's a <a href="cv.html">link to my CV</a>!</p>
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>Main Page</h1>
+                <p>Welcome!</p>
+                <p>
+                    This is the personal page of me, Domonkos Balogh. I am currently working as a Data Scientist and
+                    studying
+                    Computer Science at Eötvös Loránd University. I am based in Budapest. I like to play chess and take
+                    hikes
+                    with my girlfriend.
+                    Here's a <a href="cv.html">link to my CV</a>!</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="domonkosbalogh.png" alt="My profile picture">
+            </div>
+        </div>
+
 
         <h2>Get in touch with me</h2>
-        <form class="form-horizontal" action="">
+        <form id="target" class="form-horizontal">
             <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Name:</label>
+                <label class="control-label col-sm-2" for="name">Name:</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" size="25"
+                        maxlength="50">
                 </div>
                 <div class="col-sm-6">
                     Message subject:
@@ -53,27 +69,41 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="email">Email:</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email" placeholder="Enter password" name="pwd">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" size="25"
+                        maxlength="50">
                 </div>
                 <div class="col-sm-6">
-                    <input type="checkbox" id="unanswered"> I understand that my message may remain unanswered.
+                    <input type="checkbox" id="unanswered" name="unanswered"> I understand that my message may remain
+                    unanswered.
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="message">Message:</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-6">
                     <button type="submit" class="btn btn-default">Submit</button>
-                    <button type="submit" class="btn btn-default">Reset</button>
+                    <!-- <button type="submit" class="btn btn-default">Reset</button> -->
                 </div>
             </div>
         </form>
     </div>
+    <script>
+        var form = $("#target");
+        form.submit(function (event) {
+            data = form.serializeArray();
+            console.log(data);
+            alert("MOCK BACKEND Message received from " + data[0].value + "(" + data[1].value + "): " + data[2].value);
+            event.preventDefault();
+        });
+    </script>
+    <script>
+        skipToMenuInit(SkipToConfig);
+    </script>
 </body>
 
 </html>

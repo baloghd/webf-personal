@@ -9,7 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://paypal.github.io/skipto/downloads/js/SkipTo.min.js"></script>
 
     <title>Domonkos Balogh - Main Page</title>
 </head>
@@ -32,18 +31,50 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h1>Main Page</h1>
-                <p>Welcome!</p>
-                <p>
-                    This is the personal page of me, Domonkos Balogh. I am currently working as a Data Scientist and
-                    studying
-                    Computer Science at Eötvös Loránd University. I am based in Budapest. I like to play chess and take
-                    hikes
-                    with my girlfriend.
-                    Here's a <a href="cv.html">link to my CV</a>!</p>
+                <section>
+                    <h1>Main Page</h1>
+                    <p>Welcome!</p>
+                    <p>
+                        This is the <i>personal page</i> of me, Domonkos Balogh. I am currently working as a <i>Data
+                            Scientist</i>
+                        and
+                        studying
+                        Computer Science at <b>Eötvös Loránd University</b>. I am based in Budapest. I like to play
+                        chess
+                        and take
+                        hikes
+                        with my girlfriend.
+                        Here's a <a href="cv.html">link to my CV</a>!</p>
+                </section>
+
+                <section>
+                    <article>
+                        <header>
+                            My favorite Latin quotes
+                        </header>
+                        <p>I have always liked the profoundness of Latin quotes.
+                        <aside>
+                            I have studied a whole host of languages to get a feel for them (German, Spanish, French,
+                            Romanian, Russian besides English), but I never formally studied Latin.
+                        </aside>
+                        Some of my favourites include: <span class="idezet">Per aspera ad astra</span>, which
+                        roughly translates to "through
+                        hardships to the stars". In the same vein, I also like
+                        <span class="idezet">Dum spiro, spero</span>, which means "while I breathe, I hope". All in
+                        all, my absolute favorite one is
+                        <span class="idezet">Age quod agis</span>, which equals "if you do something, do it well".
+
+                        </p>
+
+                    </article>
+                </section>
             </div>
             <div class="col-sm-4">
-                <img src="domonkosbalogh.png" alt="My profile picture">
+                <figure>
+                    <img src="domonkosbalogh.png" alt="My profile picture">
+                    <figcaption>My profile picture taken in Sydney in 2019.</figcaption>
+                </figure>
+
             </div>
         </div>
 
@@ -104,6 +135,10 @@
     <script>
         skipToMenuInit(SkipToConfig);
     </script>
+    <footer>
+        Balogh Domonkos ©
+        2020
+    </footer>
 </body>
 
 </html>

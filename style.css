@@ -48,3 +48,11 @@ aside {
     font-style: italic;
     font-size: 1.25em;
 }
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
